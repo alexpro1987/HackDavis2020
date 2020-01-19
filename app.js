@@ -10,10 +10,14 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: false}));
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword",
-  database: "mydb"
+  host: "34.94.156.238",
+  user: "appdb",
+  password: "mentforyouapp",
+  database: "mentforyoudb"
+});
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
 });
 
 app.route('/mentors').get(function(req,res)
@@ -36,8 +40,6 @@ app.route('/students').post(function(req,res)
 	//var year = req.body.year;
 	var from = req.body.from;
 	//var classes = req.body.classes;
-	console.log('email '+email+', username '+password+ ', fName '+ fName+ ', lName '+' from,'+from)
-	console.log(req.body);
 
 
     res.sendFile(path.join(__dirname+'/Students.html'));
