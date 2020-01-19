@@ -1,0 +1,25 @@
+{
+  "name": "hackdavis2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start":"node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexpro1987/HackDavis2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexpro1987/HackDavis2020/issues"
+  },
+  "homepage": "https://github.com/alexpro1987/HackDavis2020#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "path": "^0.12.7",
+    "socket.io": "^2.3.0"
+  }
+}
