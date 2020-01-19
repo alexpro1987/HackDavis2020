@@ -29,9 +29,9 @@ app.get('/', async (req, res) => {
   // Get the 5 most recent votes.
   const recentVotesQuery = pool.query(
     'SELECT majorname from majors'
-
+  );
     console.log(recentVotesQuery);
-  });
+  };
 
 app.route('/mentors').get(function(req,res)
 {
