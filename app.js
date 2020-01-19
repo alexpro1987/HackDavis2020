@@ -6,6 +6,7 @@ const router = express.Router();
 var io = require('socket.io')(http);
 app.use(express.static(path.join(__dirname, 'public')));
 const bodyParser = require('body-parser')
+const mysql = require('promise-mysql');
 app.use(bodyParser.urlencoded({extended: false}));
 
 let pool;
@@ -30,8 +31,13 @@ app.get('/', async (req, res) => {
   const recentVotesQuery = pool.query(
     'SELECT majorname from majors'
   );
-    console.log(recentVotesQuery);
-  };
+
+    const recentVotes = await recentVotesQuery;
+    console.log('poop');
+
+    console.log(res);
+});
+
 
 app.route('/mentors').get(function(req,res)
 {
