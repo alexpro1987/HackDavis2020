@@ -46,48 +46,48 @@
 					</div>
 					<button>Login</button>
 				</form>
-				<form>
+				<form id="registerForm" action="/student" method="post">
 					<div class="inputs">
 						<div class="input">
-							<input placeholder="Email" type="text">
+							<input placeholder="Email" type="text" id="email">
 							<img src="img/mail.svg">
 						</div>
 						<div class="input">
-							<input placeholder="Username" type="text">
+							<input placeholder="Username" type="text" id="username">
 							
 						</div>
 						<div class="input">
-							<input placeholder="Password" type="password">
+							<input placeholder="Password" type="password" id="password">
 							
 						</div>
                         
 						<div class="input">
-							<input placeholder="Fisrt Name" type="text">
+							<input placeholder="First Name" type="text" id="fName">
 							
 						</div>
                         <div class="input">
-							<input placeholder="Last Name" type="text">
+							<input placeholder="Last Name" type="text" id="lName">
 							
 						</div>
                     
                     
 						<div class="input">
-							<input placeholder="Year in School" type="text">
+							<input placeholder="Year in School" type="text" id="year" disabled>
 							
 						</div>
                     
 						<div class="input">
-							<input placeholder="Where you from " type="text">
+							<input placeholder="Where you from " type="text" id="from">
 							
 						</div>
                         <div class="input">
-							<input placeholder="Classes Taken " type="text">
+							<input placeholder="Classes Taken " type="text" id="classes" disabled>
 							
 						</div>
                         
 						</div>
 					
-					<button>Register</button>
+					<button type="submit" form="registerForm">Register</button>
 				</form>
 			</div>
 		</div>
