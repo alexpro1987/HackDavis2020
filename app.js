@@ -4,6 +4,7 @@ var http = require('http').createServer(app);
 const path = require('path');
 const router = express.Router();
 var io = require('socket.io')(http);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.route('/mentor').get(function(req,res)
 {
@@ -13,6 +14,11 @@ app.route('/mentor').get(function(req,res)
 app.route('/students').get(function(req,res)
 {
     res.sendFile(path.join(__dirname+'/Students.html'));
+});
+
+app.route('/index').get(function(req,res)
+{
+    res.sendFile(path.join(__dirname+'/index.html'));
 });
 
 app.get('/', function(req,res){
