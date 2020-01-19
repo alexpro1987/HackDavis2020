@@ -16,15 +16,15 @@ app.route('/Angular').get(function(req,res)
 });
 
 app.get('/', function(req,res){
-    res.sendFile(path.join(__dirname+'/home.html'));
+    res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.get('/login', function(req,res){
-    res.sendFile(path.join(__dirname+'/login.html'));
+app.get('/mentor', function(req,res){
+    res.sendFile(path.join(__dirname+'/mentor.html'));
 });
 
-app.get('/register', function(req,res){
-    res.sendFile(path.join(__dirname+'/register.html'));
+app.get('/student', function(req,res){
+    res.sendFile(path.join(__dirname+'/Students.html'));
 });
 
 io.on('connection', function(socket){
