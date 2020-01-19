@@ -5,9 +5,14 @@ const path = require('path');
 const router = express.Router();
 var io = require('socket.io')(http);
 
-app.route('/profile').get(function(req,res)
+app.route('/mentor').get(function(req,res)
 {
-    res.sendFile(path.join(__dirname+'/profile.html'));
+    res.sendFile(path.join(__dirname+'/mentor.html'));
+});
+
+app.route('/students').get(function(req,res)
+{
+    res.sendFile(path.join(__dirname+'/Students.html'));
 });
 
 app.get('/', function(req,res){
