@@ -8,12 +8,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: false}));
 
-var con = mysql.createConnection({
-  host: "34.94.156.238",
-  user: "appdb",
-  password: "mentforyouapp",
-  database: "mentforyoudb"
-});
 let pool;
 const createPool = async () => {
   pool = await mysql.createPool({
