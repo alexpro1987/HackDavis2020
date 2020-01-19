@@ -7,7 +7,7 @@ var io = require('socket.io')(http);
 app.use(express.static(path.join(__dirname, 'public')));
 var mysql = require('mysql');
 const bodyParser = require('body-parser')
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 
 var con = mysql.createConnection({
   host: "localhost",
@@ -37,6 +37,7 @@ app.route('/students').post(function(req,res)
 	var from = req.body.from;
 	//var classes = req.body.classes;
 	console.log('email '+email+', username '+password+ ', fName '+ fName+ ', lName '+' from,'+from)
+	console.log(req.body);
 
 
     res.sendFile(path.join(__dirname+'/Students.html'));
